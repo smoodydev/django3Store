@@ -8,7 +8,6 @@ from products.models import Product
 
 def view_bag(request):
     """ A view that renders the bag contents page """
-
     return render(request, 'bag/bag.html')
 
 
@@ -122,3 +121,8 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+def dumpCart(request):
+    request.session['bag'] = {}
+    return HttpResponse(status=200)

@@ -14,7 +14,7 @@ A repo to demostrate the functionality of the Code Institute project "Boutique A
   - python3 manage.py makemigrations
   - python3 manage.py migrate
 5) Generate Product Data from products/fixtures
-  - python3 manage.py loaddata collections
+  - python3 manage.py loaddata categories
   - python3 manage.py loaddata products
 6) Run the server
   - python3 manage.py runserver
